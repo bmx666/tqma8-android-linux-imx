@@ -99,6 +99,12 @@ properties:
       This denotes which SGMII configuration is used (4 or 6-wire modes).
       Some MACs work with differential SGMII clock. See data manual for details.
 
+  ti,use-sw-restart:
+    type: boolean
+    description: |
+      phy_reset function sets bit SW_RESTART instead of SW_RESET to keep register
+      values
+
   ti,fifo-depth:
     deprecated: true
     $ref: /schemas/types.yaml#definitions/uint32
