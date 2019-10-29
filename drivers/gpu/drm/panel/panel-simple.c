@@ -2343,7 +2343,7 @@ static const struct panel_desc innolux_n116bge = {
 };
 
 static const struct drm_display_mode innolux_g150xne_l01_mode = {
-	.clock = 65000,
+	.clock = 74250,
 	.hdisplay = 1024,
 	.hsync_start = 1024 + 0,
 	.hsync_end = 1024 + 1,
@@ -3765,7 +3765,7 @@ static const struct panel_desc tfc_s9700rtwv43tr_01b = {
 };
 
 static const struct display_timing tianma_tm070jdhg30_timing = {
-	.pixelclock = { 62600000, 68200000, 78100000 },
+	.pixelclock = { 74250000, 74250000, 74250000 },
 	.hactive = { 1280, 1280, 1280 },
 	.hfront_porch = { 15, 64, 159 },
 	.hback_porch = { 5, 5, 5 },
