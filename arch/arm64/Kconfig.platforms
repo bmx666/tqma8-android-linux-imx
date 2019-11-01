@@ -195,6 +195,8 @@ config ARCH_MXC
 	select PM
 	select PM_GENERIC_DOMAINS
 	select SOC_BUS
+	select CLKSRC_MMIO
+	select RESET_CONTROLLER
 	help
 	  This enables support for the ARMv8 based SoCs in the
 	  NXP i.MX family.
