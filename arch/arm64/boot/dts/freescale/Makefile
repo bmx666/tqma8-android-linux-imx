@@ -174,5 +174,6 @@ dtb-$(CONFIG_ARCH_MXC) += imx8qm-mek-ov5640-no-product.dtb imx8qm-mek-ov5640-no-
 			  imx8qm-mek-car-esai.dtb imx8qm-mek-car2-esai.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mek-car.dtb imx8qxp-mek-car2.dtb imx8qxp-mek-ov5640-rpmsg-no-product.dtb \
 			  imx8qxp-mek-ov5640-rpmsg-no-dynamic_partition.dtb imx8qxp-mek-ov5640-rpmsg-no-product-no-dynamic_partition.dtb
+dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx.dtb
 dtb-$(CONFIG_ARCH_S32) += s32v234-evb.dtb \
 			  s32v234-sbc.dtb
