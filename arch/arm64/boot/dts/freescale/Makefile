@@ -199,3 +199,4 @@ dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mek-ov5640-rpmsg-no-product.dtb
 
 
 # TQ dtb
+dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx.dtb
