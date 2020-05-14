@@ -1740,6 +1740,30 @@ static const struct panel_desc dmb_s070swv29hg_dc44 = {
 	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_NEGEDGE,
 };
 
+static const struct display_timing edt_et1010g0dsa_timing = {
+	.pixelclock = { 68900000, 71100000, 73400000 },
+	.hactive = { 1280, 1280, 1280 },
+	.hfront_porch = { 25, 25, 25 },
+	.hback_porch = { 55, 55, 55 },
+	.hsync_len = { 80, 80, 80 },
+	.vactive = { 800, 800, 800 },
+	.vfront_porch = { 5, 5, 5 },
+	.vback_porch = { 16, 16, 16 },
+	.vsync_len = { 2, 2, 2 },
+	.flags = DISPLAY_FLAGS_DE_HIGH,
+};
+
+static const struct panel_desc edt_et1010g0dsa = {
+	.timings = &edt_et1010g0dsa_timing,
+	.num_timings = 1,
+	.bpc = 8,
+	.size = {
+		.width = 217,
+		.height = 136,
+	},
+	.bus_format = MEDIA_BUS_FMT_RGB888_1X7X4_SPWG,
+};
+
 static const struct drm_display_mode edt_et035012dm6_mode = {
 	.clock = 6500,
 	.hdisplay = 320,
@@ -4173,6 +4197,12 @@ static const struct of_device_id platform_of_match[] = {
 	}, {
 		.compatible = "edt,etm0430g0dh6",
 		.data = &edt_etm0430g0dh6,
+	}, {
+		.compatible = "edt,et1010g0dsa",
+		.data = &edt_et1010g0dsa,
+	}, {
+		.compatible = "edt,etml1010g0dka",
+		.data = &edt_et1010g0dsa,
 	}, {
 		.compatible = "edt,et057090dhu",
 		.data = &edt_et057090dhu,
