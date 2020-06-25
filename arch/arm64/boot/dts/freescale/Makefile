@@ -166,7 +166,8 @@ dtb-$(CONFIG_ARCH_MXC) += imx8dxl-evk.dtb imx8dxl-evk-rpmsg.dtb \
 			  imx8dxl-evk-root.dtb imx8dxl-evk-inmate.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mm-evk-no-product.dtb imx8mm-evk-no-dynamic_partition.dtb imx8mm-evk-no-product-no-dynamic_partition.dtb \
 			  imx8mm-ddr4-evk-no-product.dtb imx8mm-ddr4-evk-no-dynamic_partition.dtb imx8mm-ddr4-evk-no-product-no-dynamic_partition.dtb
-dtb-$(CONFIG_ARCH_MXC) += imx8mm-mba8mx.dtb
+dtb-$(CONFIG_ARCH_MXC) += imx8mm-mba8mx.dtb \
+			  imx8mm-mba8mx-lcdif-lvds-tm070jvhg33.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mn-ddr4-evk-no-product.dtb imx8mn-ddr4-evk-no-dynamic_partition.dtb imx8mn-ddr4-evk-no-product-no-dynamic_partition.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mn-mba8mx.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mp-evk-no-product.dtb imx8mp-evk-no-dynamic_partition.dtb imx8mp-evk-no-product-no-dynamic_partition.dtb
