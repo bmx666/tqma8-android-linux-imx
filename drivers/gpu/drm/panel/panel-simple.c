@@ -3802,6 +3802,34 @@ static const struct panel_desc tianma_tm070jvhg33 = {
 	.connector_type = DRM_MODE_CONNECTOR_LVDS,
 };
 
+static const struct display_timing tianma_tm070jvhg33_timing_imx8m = {
+	/* fixed clock to match restrictions of imx nwl dsi bridge */
+	.pixelclock = { 74250000, 74250000, 74250000 },
+	.hactive = { 1280, 1280, 1280 },
+	/* fixes, special HSYNC timing for imx sec_dsim on i.MX8MM / i.MX78MN */
+	.hfront_porch = { 40, 40, 40 },
+	.hback_porch = { 40, 40, 40 },
+	.hsync_len = { 40, 40, 40},
+	.vactive = { 800, 800, 800 },
+	.vfront_porch = { 3, 40, 99 },
+	.vback_porch = { 2, 2, 2 },
+	.vsync_len = { 1, 1, 128 },
+};
+
+static const struct panel_desc tianma_tm070jvhg33_imx8m = {
+	.timings = &tianma_tm070jvhg33_timing_imx8m,
+	.num_timings = 1,
+	.bpc = 8,
+	.size = {
+		.width = 150,
+		.height = 94,
+	},
+	/* MEDIA_BUS_FMT_RGB888_1X7X4_SPWG is not accepted by i.MX [e]LCDIF */
+	.bus_format = MEDIA_BUS_FMT_RGB888_1X24,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH,
+	.connector_type = DRM_MODE_CONNECTOR_LVDS,
+};
+
 static const struct display_timing tianma_tm070rvhg71_timing = {
 	.pixelclock = { 27700000, 29200000, 39600000 },
 	.hactive = { 800, 800, 800 },
@@ -4441,6 +4469,9 @@ static const struct of_device_id platform_of_match[] = {
 	}, {
 		.compatible = "tianma,tm070jvhg33",
 		.data = &tianma_tm070jvhg33,
+	}, {
+		.compatible = "tianma,tm070jvhg33_mx8m",
+		.data = &tianma_tm070jvhg33_imx8m,
 	}, {
 		.compatible = "tianma,tm070rvhg71",
 		.data = &tianma_tm070rvhg71,

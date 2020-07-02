@@ -261,6 +261,9 @@ properties:
       - tianma,tm070jdhg30
         # Tianma Micro-electronics TM070JVHG33 7.0" WXGA TFT LCD panel
       - tianma,tm070jvhg33
+        # Tianma Micro-electronics TM070JVHG33 7.0" WXGA TFT LCD panel
+        # for usage with i.MX8M/i.MX8MN/i.MX8MN with DSI to LVDS display bridge
+      - tianma,tm070jvhg33_mx8m
         # Tianma Micro-electronics TM070RVHG71 7.0" WXGA TFT LCD panel
       - tianma,tm070rvhg71
         # Toshiba 8.9" WXGA (1280x768) TFT LCD panel
