@@ -24,6 +24,7 @@ struct imx_usbmisc_data {
 	unsigned int hsic:1; /* HSIC controlller */
 	unsigned int ext_id:1; /* ID from exteranl event */
 	unsigned int ext_vbus:1; /* Vbus from exteranl event */
+	unsigned int dig_id_sel:1; /* select muxable pin for ID -> DIG_ID_SEL */
 	struct usb_phy *usb_phy;
 	enum usb_dr_mode available_role; /* runtime usb dr mode */
 	int emp_curr_control;
