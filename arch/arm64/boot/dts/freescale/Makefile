@@ -201,6 +201,7 @@ dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mek-ov5640-rpmsg-no-product.dtb
 # TQ dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mm-mba8mx.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mm-mba8mx-lcdif-lvds-tm070jvhg33.dtb
+dtb-$(CONFIG_ARCH_MXC) += imx8mm-mba8mx-rpmsg.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mn-mba8mx.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mn-mba8mx-lcdif-lvds-tm070jvhg33.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mn-mba8mx-usb0otg.dtb
