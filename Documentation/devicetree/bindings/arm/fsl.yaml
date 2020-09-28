@@ -422,7 +422,9 @@ properties:
 
       - description:
           TQMa8MxML is a series of SOM featuring NXP i.MX8MM system-on-chip
-          variants. It is designed to be soldered on different carrier boards
+          variants. It is designed to be soldered on different carrier boards.
+          All variants (TQMa8M[Q,D,S][L]ML) use the same device tree hence only
+          one compatible is needed.
           MBa8Mx together with a plugin adapter is the starterkit
         items:
           - enum:
@@ -448,6 +450,18 @@ properties:
           - enum:
               - fsl,imx8mp-evk            # i.MX8MP EVK Board
           - const: fsl,imx8mp
+
+      - description:
+          TQMa8MxNL is a series of SOM featuring NXP i.MX8MN system-on-chip
+          variants. It is designed to be soldered on different carrier boards.
+          All variants (TQMa8M[Q,D,S][L]NL) use the same device tree hence only
+          one compatible is needed.
+          MBa8Mx together with a plugin adapter is the starterkit
+        items:
+          - enum:
+              - tq,imx8mn-mba8mx         # TQ Systems GmbH i.MX8MM TQMa8MxNL SOM on MBa8Mx
+          - const: tq,imx8mm-tqma8mxnl   # TQ Systems GmbH i.MX8MM TQMa8MxML SOM
+          - const: fsl,imx8mn
 
       - description: i.MX8MQ based Boards
         items:
@@ -479,7 +493,9 @@ properties:
  
       - description:
           TQMa8Mx is a series of SOM featuring NXP i.MX8MQ system-on-chip
-          variants. It is designed to be clicked on different carrier boards
+          variants. It is designed to be clicked on different carrier boards.
+          All variants (TQMa8MQ[L], TQMa8MD) use the same device tree hence only
+          one compatible is needed.
           MBa8Mx is the starterkit
         items:
           - enum:
