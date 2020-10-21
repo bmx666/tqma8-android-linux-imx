@@ -211,6 +211,7 @@ dtb-$(CONFIG_ARCH_MXC) += imx8mq-mba8mx-hdmi.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mq-mba8mx-dcss-lvds-tm070jvhg33.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mq-mba8mx-lcdif-lvds-tm070jvhg33.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mq-mba8mx-rpmsg.dtb
+dtb-$(CONFIG_ARCH_MXC) += imx8qm-mba8x.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx-lvds-tm070jvhg33.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx-sd-uhs.dtb
