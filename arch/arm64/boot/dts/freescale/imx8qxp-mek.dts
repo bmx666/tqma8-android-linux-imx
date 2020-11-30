@@ -143,3 +143,7 @@
 &lpuart1 {
 	/delete-property/ resets;
 };
+
+&tsens {
+	tsens-num = <2>;
+};
