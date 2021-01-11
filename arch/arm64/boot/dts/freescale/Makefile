@@ -221,3 +221,4 @@ dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx-lvds-tm070jvhg33.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx-sd-uhs.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mb-smarc-2.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mb-smarc-2-lvds-tm070jvhg33.dtb
+dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mb-smarc-2-r0200.dtb
