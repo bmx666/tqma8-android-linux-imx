@@ -1837,6 +1837,10 @@
 
 };
 
+&tsens {
+	tsens-num = <6>;
+};
+
 &thermal_zones {
 	pmic-thermal0 {
 		polling-delay-passive = <250>;
