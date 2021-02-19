@@ -192,7 +192,8 @@ dtb-$(CONFIG_ARCH_MXC) += imx8qm-mek-ov5640-no-product.dtb imx8qm-mek-ov5640-no-
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mek-car.dtb imx8qxp-mek-car2.dtb imx8qxp-mek-ov5640-rpmsg-no-product.dtb \
 			  imx8qxp-mek-ov5640-rpmsg-no-dynamic_partition.dtb imx8qxp-mek-ov5640-rpmsg-no-product-no-dynamic_partition.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mba8xx.dtb \
-			  imx8qxp-mba8xx-lvds-tm070jvhg33.dtb \
+			  imx8qxp-mba8xx-lvds0-tm070jvhg33.dtb \
+			  imx8qxp-mba8xx-lvds1-tm070jvhg33.dtb \
 			  imx8qxp-mba8xx-sd-uhs.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mb-smarc-2.dtb \
 			  imx8qxp-mb-smarc-2-lvds-g133han01.dtb \
