@@ -195,3 +195,7 @@ dtb-$(CONFIG_ARCH_MXC) += imx8mp-evk-no-product.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mq-evk-no-product.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qm-mek-ov5640-no-product.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8qxp-mek-ov5640-rpmsg-no-product.dtb
+
+
+
+# TQ dtb
