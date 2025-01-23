@@ -1043,8 +1043,6 @@ static const struct drm_display_mode auo_g121xn01v001_mode = {
 	.vsync_start = 768 + 18,
 	.vsync_end = 768 + 18 + 18,
 	.vtotal = 768 + 18 + 18 + 8,
-	.vrefresh = 60,
-	.flags = DISPLAY_FLAGS_DE_HIGH,
 };
 
 static const struct panel_desc auo_g121xn01v001 = {
@@ -1056,6 +1054,7 @@ static const struct panel_desc auo_g121xn01v001 = {
 		.height = 185,
 	},
 	.bus_format = MEDIA_BUS_FMT_RGB888_1X24,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH,
 	.connector_type = DRM_MODE_CONNECTOR_LVDS,
 };
 
@@ -1751,7 +1750,6 @@ static const struct drm_display_mode dmb_s070pws19hp_fc21_mode = {
 	.vsync_start = 600 + 12,
 	.vsync_end = 600 + 12 + 3,
 	.vtotal = 600 + 10 + 3 + 20,
-	.vrefresh = 60,
 	.flags = DRM_MODE_FLAG_NHSYNC | DRM_MODE_FLAG_NVSYNC,
 };
 
@@ -1764,7 +1762,7 @@ static const struct panel_desc dmb_s070pws19hp_fc21 = {
 		.height = 86,
 	},
 	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
-	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_NEGEDGE,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
 };
 
 /* S070SWV29HG-DC44 2017/09/21 */
@@ -1778,7 +1776,6 @@ static const struct drm_display_mode dmb_s070swv29hg_dc44_mode = {
 	.vsync_start = 480 + 22,
 	.vsync_end = 480 + 22 + 2,
 	.vtotal = 480 + 22 + 2 + 21,
-	.vrefresh = 60,
 	.flags = DRM_MODE_FLAG_NHSYNC | DRM_MODE_FLAG_NVSYNC,
 };
 
@@ -1791,7 +1788,7 @@ static const struct panel_desc dmb_s070swv29hg_dc44 = {
 		.height = 86,
 	},
 	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
-	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_NEGEDGE,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_NEGEDGE,
 };
 
 static const struct display_timing edt_et1010g0dsa_timing = {
@@ -1944,7 +1941,7 @@ static const struct panel_desc edt_etm0700g0dh6 = {
 		.height = 91,
 	},
 	.bus_format = MEDIA_BUS_FMT_RGB666_1X18,
-	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_POSEDGE,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH | DRM_BUS_FLAG_PIXDATA_DRIVE_POSEDGE,
 };
 
 static const struct panel_desc edt_etm0700g0bdh6 = {
@@ -2406,7 +2403,6 @@ static const struct drm_display_mode innolux_g150xne_l01_mode = {
 	.vsync_start = 768 + 38,
 	.vsync_end = 768 + 38 + 1,
 	.vtotal = 768 + 38 + 1 + 0,
-	.vrefresh = 60,
 	.flags = DRM_MODE_FLAG_NHSYNC | DRM_MODE_FLAG_NVSYNC,
 };
 
