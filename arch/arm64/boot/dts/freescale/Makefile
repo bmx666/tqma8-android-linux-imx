@@ -93,6 +93,7 @@ dtb-$(CONFIG_ARCH_MXC) += imx8mq-mba8mx.dtb \
 			  imx8mq-mba8mx-dcss-lvds-tm070jvhg33.dtb \
 			  imx8mq-mba8mx-dcss-lvds-tm070jvhg33-v2.dtb \
 			  imx8mq-mba8mx-dcss-lvds-g121xn01v001.dtb \
+			  imx8mq-mba8mx-dcss-lvds-g121xn01v001-v2.dtb \
 			  imx8mq-mba8mx-lcdif-lvds-tm070jvhg33.dtb \
 			  imx8mq-mba8mx-rpmsg.dtb
 dtb-$(CONFIG_ARCH_MXC) += imx8mq-zii-ultra-rmb3.dtb
