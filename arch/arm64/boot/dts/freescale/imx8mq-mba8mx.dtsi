@@ -33,8 +33,8 @@
 	};
 
 	chosen {
-		bootargs = "console=ttymxc2,115200 earlycon=ec_imx6q,0x30880000,115200";
-		stdout-path = &uart3;
+		bootargs = "console=ttymxc0,115200 earlycon=ec_imx6q,0x30860000,115200";
+		stdout-path = &uart1;
 	};
 
 	extcon_usbotg: extcon-usbotg0 {
@@ -605,6 +605,7 @@
 	status = "okay";
 };
 
+/* console */
 &uart1 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart1>;
@@ -621,7 +622,6 @@
 	status = "okay";
 };
 
-/* console */
 &uart3 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&pinctrl_uart3>;
