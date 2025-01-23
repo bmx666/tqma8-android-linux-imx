@@ -3908,6 +3908,35 @@ static const struct panel_desc_dsi osd101t2045_53ts = {
 	.lanes = 4,
 };
 
+static const struct drm_display_mode tianma_tm070jvhg33_imx8m_v2_mode = {
+	.clock = 74250,
+	.hdisplay = 1280,
+	.hsync_start = 1280 + 40,
+	.hsync_end = 1280 + 40 + 40,
+	.htotal = 1280 + 40 + 40 + 40,
+	.vdisplay = 800,
+	.vsync_start = 800 + 3,
+	.vsync_end = 800 + 3 + 2,
+	.vtotal = 800 + 3 + 2 + 1,
+	.vrefresh = 60,
+	.flags = DRM_MODE_FLAG_NHSYNC | DRM_MODE_FLAG_NVSYNC,
+};
+
+static const struct panel_desc_dsi tianma_tm070jvhg33_imx8m_v2 = {
+	.desc = {
+		.modes = &tianma_tm070jvhg33_imx8m_v2_mode,
+		.num_modes = 1,
+		.bpc = 8,
+		.size = {
+			.width = 150,
+			.height = 94,
+		},
+	},
+	.flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_BURST,
+	.format = MIPI_DSI_FMT_RGB888,
+	.lanes = 4,
+};
+
 static const struct of_device_id dsi_of_match[] = {
 	{
 		.compatible = "auo,b080uan01",
@@ -3930,6 +3959,9 @@ static const struct of_device_id dsi_of_match[] = {
 	}, {
 		.compatible = "osddisplays,osd101t2045-53ts",
 		.data = &osd101t2045_53ts
+	}, {
+		.compatible = "tianma,tm070jvhg33_mx8m_v2",
+		.data = &tianma_tm070jvhg33_imx8m_v2
 	}, {
 		/* sentinel */
 	}
