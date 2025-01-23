@@ -809,13 +809,13 @@ static const struct panel_desc auo_g104sn02 = {
 static const struct drm_display_mode auo_g121xn01v001_mode = {
 	.clock = 74250,
 	.hdisplay = 1024,
-	.hsync_start = 1024 + 160,
-	.hsync_end = 1024 + 160 + 159,
-	.htotal = 1024 + 160 + 159 + 1,
+	.hsync_start = 1024 + 239,
+	.hsync_end = 1024 + 239 + 239,
+	.htotal = 1024 + 239 + 239 + 22,
 	.vdisplay = 768,
-	.vsync_start = 768 + 19,
-	.vsync_end = 768 + 19 + 18,
-	.vtotal = 768 + 19 + 18 + 1,
+	.vsync_start = 768 + 18,
+	.vsync_end = 768 + 18 + 18,
+	.vtotal = 768 + 18 + 18 + 8,
 	.vrefresh = 60,
 	.flags = DISPLAY_FLAGS_DE_HIGH,
 };
@@ -836,13 +836,13 @@ static const struct display_timing auo_g121xn01v001_timing_imx8m = {
 	.pixelclock = { 74250000, 74250000, 74250000 },
 	.hactive = { 1024, 1024, 1024 },
 	/* fixes, special HSYNC timing for imx sec_dsim on i.MX8MM / i.MX78MN */
-	.hfront_porch = { 160, 160, 160 },
-	.hback_porch = { 159, 159, 159 },
-	.hsync_len = { 1, 1, 1},
+	.hfront_porch = { 239, 239, 239 },
+	.hback_porch = { 239, 239, 239 },
+	.hsync_len = { 22, 22, 22 },
 	.vactive = { 768, 768, 768 },
-	.vfront_porch = { 19, 19, 19 },
-	.vback_porch = {18, 18, 18 },
-	.vsync_len = { 1, 1, 1 },
+	.vfront_porch = { 18, 18, 18 },
+	.vback_porch = { 18, 18, 18 },
+	.vsync_len = { 8, 8, 8 },
 };
 
 static const struct panel_desc auo_g121xn01v001_imx8m = {
