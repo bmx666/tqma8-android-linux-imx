@@ -3995,6 +3995,35 @@ static const struct panel_desc_dsi tianma_tm070jvhg33_imx8m_v2 = {
 	.lanes = 4,
 };
 
+static const struct drm_display_mode auo_g121xn01v001_imx8m_v2_mode = {
+	.clock = 74250,
+	.hdisplay = 1024,
+	.hsync_start = 1024 + 239,
+	.hsync_end = 1024 + 239 + 239,
+	.htotal = 1024 + 239 + 239 + 22,
+	.vdisplay = 768,
+	.vsync_start = 768 + 18,
+	.vsync_end = 768 + 18 + 18,
+	.vtotal = 768 + 18 + 18 + 8,
+	.vrefresh = 60,
+	.flags = DRM_MODE_FLAG_NHSYNC | DRM_MODE_FLAG_NVSYNC,
+};
+
+static const struct panel_desc_dsi auo_g121xn01v001_imx8m_v2 = {
+	.desc = {
+		.modes = &auo_g121xn01v001_imx8m_v2_mode,
+		.num_modes = 1,
+		.bpc = 8,
+		.size = {
+			.width = 246,
+			.height = 185,
+		},
+	},
+	.flags = MIPI_DSI_MODE_VIDEO | MIPI_DSI_MODE_VIDEO_BURST,
+	.format = MIPI_DSI_FMT_RGB888,
+	.lanes = 4,
+};
+
 static const struct of_device_id dsi_of_match[] = {
 	{
 		.compatible = "auo,b080uan01",
@@ -4020,6 +4049,9 @@ static const struct of_device_id dsi_of_match[] = {
 	}, {
 		.compatible = "tianma,tm070jvhg33_mx8m_v2",
 		.data = &tianma_tm070jvhg33_imx8m_v2
+	}, {
+		.compatible = "auo,g121xn01v001_mx8m_v2",
+		.data = &auo_g121xn01v001_imx8m_v2
 	}, {
 		/* sentinel */
 	}
