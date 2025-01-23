@@ -1033,6 +1033,60 @@ static const struct panel_desc auo_g121ean01 = {
 	.connector_type = DRM_MODE_CONNECTOR_LVDS,
 };
 
+static const struct drm_display_mode auo_g121xn01v001_mode = {
+	.clock = 74250,
+	.hdisplay = 1024,
+	.hsync_start = 1024 + 239,
+	.hsync_end = 1024 + 239 + 239,
+	.htotal = 1024 + 239 + 239 + 22,
+	.vdisplay = 768,
+	.vsync_start = 768 + 18,
+	.vsync_end = 768 + 18 + 18,
+	.vtotal = 768 + 18 + 18 + 8,
+	.vrefresh = 60,
+	.flags = DISPLAY_FLAGS_DE_HIGH,
+};
+
+static const struct panel_desc auo_g121xn01v001 = {
+	.modes = &auo_g121xn01v001_mode,
+	.num_modes = 1,
+	.bpc = 8,
+	.size = {
+		.width = 246,
+		.height = 185,
+	},
+	.bus_format = MEDIA_BUS_FMT_RGB888_1X24,
+	.connector_type = DRM_MODE_CONNECTOR_LVDS,
+};
+
+static const struct display_timing auo_g121xn01v001_timing_imx8m = {
+	/* fixed clock to match restrictions of imx nwl dsi bridge */
+	.pixelclock = { 74250000, 74250000, 74250000 },
+	.hactive = { 1024, 1024, 1024 },
+	/* fixes, special HSYNC timing for imx sec_dsim on i.MX8MM / i.MX78MN */
+	.hfront_porch = { 239, 239, 239 },
+	.hback_porch = { 239, 239, 239 },
+	.hsync_len = { 22, 22, 22 },
+	.vactive = { 768, 768, 768 },
+	.vfront_porch = { 18, 18, 18 },
+	.vback_porch = { 18, 18, 18 },
+	.vsync_len = { 8, 8, 8 },
+};
+
+static const struct panel_desc auo_g121xn01v001_imx8m = {
+	.timings = &auo_g121xn01v001_timing_imx8m,
+	.num_timings = 1,
+	.bpc = 8,
+	.size = {
+		.width = 246,
+		.height = 185,
+	},
+	/* MEDIA_BUS_FMT_RGB888_1X7X4_SPWG is not accepted by i.MX [e]LCDIF */
+	.bus_format = MEDIA_BUS_FMT_RGB888_1X24,
+	.bus_flags = DRM_BUS_FLAG_DE_HIGH,
+	.connector_type = DRM_MODE_CONNECTOR_LVDS,
+};
+
 static const struct display_timing auo_g133han01_timings = {
 	.pixelclock = { 134000000, 141200000, 149000000 },
 	.hactive = { 1920, 1920, 1920 },
@@ -4139,6 +4193,12 @@ static const struct of_device_id platform_of_match[] = {
 	}, {
 		.compatible = "auo,g121ean01",
 		.data = &auo_g121ean01,
+	}, {
+		.compatible = "auo,g121xn01v001",
+		.data = &auo_g121xn01v001,
+	}, {
+		.compatible = "auo,g121xn01v001_mx8m",
+		.data = &auo_g121xn01v001_imx8m,
 	}, {
 		.compatible = "auo,g133han01",
 		.data = &auo_g133han01,
